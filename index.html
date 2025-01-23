@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fletnix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    
+    <header>
+        <div id="branding" class="ftx-branding">
+            <img src="assets/Fletnix-logo.svg" alt="Fletnix logo"/>
+        </div>
+    </header>
+
+    <section id="showcase" class="ftx-showcase">
+        <div class="container">
+            <h1>Des milliers de films, de téléséries, de documentaires...</h1>
+            <p>Sur une seule plateforme</p>
+        </div>
+    </section>
+
+    <section id="boxes" class="ftx-boxes">
+        <div class="container">
+            <div class="box">
+                <img src="img/film.jpg" alt="Film">
+            </div>
+
+            <div class="ftx-box">
+                <h2>Souscrivez maintenant pour 9,99$ par mois</h3>
+                <h2>ou sauvez 1 mois en souscrivant pour 1 an (109,89$)</h2>
+            </div>
+
+            <div class="ftx-box">
+                <h3>Tous les champs ci-dessous sont obligatoires</h3>
+                <p>Tous les champs ci-dessous sont obligatoires</p>
+                
+                <form action="submit" method="post" class="ftx-form">
+                    <div class="ftx-form-group">
+                        <radiogroup name="subscription">
+                            <label for="month" class="ftx-form-label">1 mois</label>
+                            <input type="radio" id="month" class="ftx-form-input" name="month">
+                            <label for="year" class="ftx-form-label">1 an</label>
+                            <input type="radio" id="year" class="ftx-form-input" name="year">
+                        </radiogroup>
+
+                        <label for="name" class="ftx-form-label">Nom</label>
+                        <input type="text" id="name" class="ftx-form-input" name="name" required>
+
+                        <label for="surname" class="ftx-form-label">Prénom</label>
+                        <input type="text" id="surname" class="ftx-form-input" name="surname" required>
+
+                        <label for="email" class="ftx-form-label">Adresse e-mail</label>
+                        <input type="email" id="email" class="ftx-form-input" name="email" required>
+
+                        <label for="password" class="ftx-form-label">Définir un mot de passe</label>  
+                        <input type="password" id="password" class="ftx-form-input" name="password" required>
+                        <label for="password" class="ftx-form-label">Confirmer le mot de passe</label>
+                        <input type="password" id="password" class="ftx-form-input" name="password" required>
+
+                        <label for="gender" class="ftx-form-label">Genre</label>
+                        <radiogroup name="gender">
+                            <label for="male" class="ftx-form-label">Homme</label>
+                            <input type="radio" id="male" class="ftx-form-input" name="male">
+                            <label for="female" class="ftx-form-label">Femme</label>
+                            <input type="radio" id="female" class="ftx-form-input" name="female">
+                            <label for="other" class="ftx-form-label">Autre</label>
+                            <input type="radio" id="other" class="ftx-form-input" name="other">
+                        </radiogroup>
+
+                        <div class="ftx-form-group">
+                            
+                        <label for="creditcard" class="ftx-form-label">Numéro de carte de crédit</label>
+                        <input type="text" id="creditcard" class="ftx-form-input" name="creditcard" required>
+
+                        <label for="expiration" class="ftx-form-label">Date d'expiration</label>
+                        <input type="text" id="expiration" class="ftx-form-input" name="expiration" required>
+
+                        <label for="cvv" class="ftx-form-label">CVV</label>
+                        <input type="text" id="cvv" class="ftx-form-input" name="cvv" required>
+
+                        <button type="button" class="ftx-form-btn">Ajouter une carte de crédit</button>
+                        </div>
+
+                        <button type="cancel" class="ftx-form-btn">Cancel</button>
+                        <button type="submit" class="ftx-form-btn">Souscription</button>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>FLETNIX &copy; 2025 - Projet Cegep Limoilou - TR-00Q2-00Q6-DY63 - AEC (RAC)</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
