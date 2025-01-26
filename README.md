@@ -1,4 +1,4 @@
-FLETNIX
+#FLETNIX
 
 Testé sur Chrome, Firefox et Safari.
 Développé sous Visual Studio Code, avec l'extension 'Live Server' (lancer l'extension sur 'index.html').
@@ -7,9 +7,11 @@ Développé sous Visual Studio Code, avec l'extension 'Live Server' (lancer l'ex
 - Lancer par un double click sur 'index.html'.
 
 - Il faut s'inscrire pour pouvoir accéder à la plateforme.
-        Note 1: Seules les cartes de crédit Visa, Mastercard, America Express, Diners Club, Discover et JCB Cards sont acceptées.
-        Note 2: Des numéros de cartes de crédit de tests se trouvent dans 'collect / creditcards.json'.
-        Note 3: L'utilisateur peut utiliser jusqu'à 5 cartes de crédit pour payer. Cliquer sur le bouton "Ajouter une carte de crédit pour changer de carte de crédit".
+        1 Seules les cartes de crédit Visa, Mastercard, America Express, Diners Club, Discover et JCB Cards sont acceptées.
+
+        2 Des numéros de cartes de crédit de tests se trouvent dans 'collect / creditcards.json'.
+
+        3 L'utilisateur peut utiliser jusqu'à 5 cartes de crédit pour payer. Cliquer sur le bouton "Ajouter une carte de crédit pour changer de carte de crédit".
         
 
 - Une fois inscrit, les informations sont stockées dans le local storage du navigateur. Si un nettoyage de la cache est effectué, la page de connection s'ouvrira.
@@ -20,9 +22,9 @@ Développé sous Visual Studio Code, avec l'extension 'Live Server' (lancer l'ex
 
 -----------------------------------------------------------------------------------------------------------
 
-Languages utilisés: HTML, CSS (Less) et Javascript (Typescript)
+###Languages utilisés: HTML, CSS (Less) et Javascript (Typescript)
 
-Structure:
+##Structure:
     - index.html            ->  Page d'accueil
     - dossier 'assets'      ->  Contient les fichiers SVG
     - dossier 'collect'     ->  Contient les collections

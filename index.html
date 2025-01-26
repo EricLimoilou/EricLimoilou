@@ -11,93 +11,110 @@
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-    
-    <header>
-        <div id="branding" class="ftx-branding">
-            <img src="assets/Fletnix-logo.svg" alt="Fletnix logo"/>
+    <div class="carousel-container">
+        <div class="carousel" id="carouselId">
+            <!-- Carousel d'images importé dynamiquement -->
         </div>
-    </header>
+    </div>
 
-    <section id="showcase" class="ftx-showcase">
-        <div class="container">
-            <h1>Des milliers de films, de téléséries, de documentaires...</h1>
-            <p>Sur une seule plateforme</p>
-        </div>
-    </section>
-
-    <section id="boxes" class="ftx-boxes">
-        <div class="container">
-            <div class="box">
-                <img src="img/film.jpg" alt="Film">
+    <div class="ftx-wrapper">
+        <header>
+            <div id="branding" class="ftx-branding">
+                <img src="assets/Fletnix-logo.svg" alt="Fletnix logo"/>
             </div>
+        </header>
 
-            <div class="ftx-box">
-                <h2>Souscrivez maintenant pour 9,99$ par mois</h3>
-                <h2>ou sauvez 1 mois en souscrivant pour 1 an (109,89$)</h2>
+        <section id="showcase" class="ftx-showcase">
+            <div class="container">
+                <h1>Des centaines de films, de téléséries, de documentaires...</h1>
+                <h2>Sur une seule plateforme</h2>
             </div>
+        </section>
 
-            <div class="ftx-box">
-                <h3>Tous les champs ci-dessous sont obligatoires</h3>
-                <p>Tous les champs ci-dessous sont obligatoires</p>
-                
-                <form action="submit" method="post" class="ftx-form">
-                    <div class="ftx-form-group">
-                        <radiogroup name="subscription">
-                            <label for="month" class="ftx-form-label">1 mois</label>
-                            <input type="radio" id="month" class="ftx-form-input" name="month">
-                            <label for="year" class="ftx-form-label">1 an</label>
-                            <input type="radio" id="year" class="ftx-form-input" name="year">
-                        </radiogroup>
+        <section id="boxes" class="ftx-boxes">
+            <div class="ftx-container">
+                <div class="ftx-box">
+                    <h2>Souscrivez maintenant pour 9,99$ par mois</h3>
+                    <br>
+                    <p>Tous les champs ci-dessous sont obligatoires.</p>
+                    <br>
+                </div>
 
-                        <label for="name" class="ftx-form-label">Nom</label>
-                        <input type="text" id="name" class="ftx-form-input" name="name" required>
+                <div class="ftx-box">
+                    <form id="subscription-form" action="submit" method="post" class="ftx-form">
+                        <label for="lastName" class="ftx-form-label">Nom</label>
+                        <input type="text" id="lastName" class="ftx-form-input" name="lastName" required>
+                        <div id="subscription-input-name" class="ftx-error"></div>
 
-                        <label for="surname" class="ftx-form-label">Prénom</label>
-                        <input type="text" id="surname" class="ftx-form-input" name="surname" required>
+                        <label for="firstnName" class="ftx-form-label">Prénom</label>
+                        <input type="text" id="firstnName" class="ftx-form-input" name="firstnName" required>
+                        <div id="subscription-input-firstname" class="ftx-error"></div>
 
                         <label for="email" class="ftx-form-label">Adresse e-mail</label>
                         <input type="email" id="email" class="ftx-form-input" name="email" required>
+                        <div id="subscription-input-email" class="ftx-error"></div>
 
-                        <label for="password" class="ftx-form-label">Définir un mot de passe</label>  
-                        <input type="password" id="password" class="ftx-form-input" name="password" required>
-                        <label for="password" class="ftx-form-label">Confirmer le mot de passe</label>
-                        <input type="password" id="password" class="ftx-form-input" name="password" required>
+                        <label for="passworddef" class="ftx-form-label">Définir un mot de passe</label>  
+                        <input type="password" id="passworddef" class="ftx-form-input" name="passworddef" required>
+                        <div id="subscription-input-passworddef" class="ftx-error"></div>
+                        <label for="passwordValid" class="ftx-form-label">Confirmer le mot de passe</label>
+                        <input type="password" id="passwordValid" class="ftx-form-input" name="passwordValid" required>
+                        <div id="subscription-input-passwordValid" class="ftx-error"></div>
 
                         <label for="gender" class="ftx-form-label">Genre</label>
                         <radiogroup name="gender">
-                            <label for="male" class="ftx-form-label">Homme</label>
-                            <input type="radio" id="male" class="ftx-form-input" name="male">
-                            <label for="female" class="ftx-form-label">Femme</label>
-                            <input type="radio" id="female" class="ftx-form-input" name="female">
-                            <label for="other" class="ftx-form-label">Autre</label>
-                            <input type="radio" id="other" class="ftx-form-input" name="other">
+                            <div class="ftx-form-radio">
+                                <label for="male" class="ftx-form-radiolabel">Homme</label>
+                                <input type="radio" id="male" class="ftx-form-radioinput" name="male">
+                                <div id="subscription-radio-male" class="ftx-error"></div>
+                            </div>
+
+                            <div class="ftx-form-radio">
+                                <label for="female" class="ftx-form-radiolabel">Femme</label>
+                                <input type="radio" id="female" class="ftx-form-radioinput" name="female">
+                                <div id="subscription-radio-female" class="ftx-error"></div>
+                            </div>
+
+                            <div class="ftx-form-radio">
+                                <label for="other" class="ftx-form-radiolabel">Autre</label>
+                                <input type="radio" id="other" class="ftx-form-radioinput" name="other">
+                                <div id="subscription-radio-other" class="ftx-error"></div>
+                            </div>
                         </radiogroup>
 
                         <div class="ftx-form-group">
-                            
-                        <label for="creditcard" class="ftx-form-label">Numéro de carte de crédit</label>
-                        <input type="text" id="creditcard" class="ftx-form-input" name="creditcard" required>
+                            <label for="creditcard" class="ftx-form-label">Numéro de carte de crédit</label>
+                            <input type="text" id="creditcard" class="ftx-form-input" name="creditcard" required>
+                            <div id="subscription-input-ccnumber" class="ftx-error"></div>
 
-                        <label for="expiration" class="ftx-form-label">Date d'expiration</label>
-                        <input type="text" id="expiration" class="ftx-form-input" name="expiration" required>
+                            <label for="expiration" class="ftx-form-label">Date d'expiration</label>
+                            <input type="text" id="expiration" class="ftx-form-input" name="expiration" required>
+                            <div id="subscription-input-expiration" class="ftx-error"></div>
 
-                        <label for="cvv" class="ftx-form-label">CVV</label>
-                        <input type="text" id="cvv" class="ftx-form-input" name="cvv" required>
+                            <label for="cvv" class="ftx-form-label">CVV</label>
+                            <input type="text" id="cvv" class="ftx-form-input" name="cvv" required>
+                            <div id="subscription-input-cvv" class="ftx-error"></div>
 
-                        <button type="button" class="ftx-form-btn">Ajouter une carte de crédit</button>
+                            <button type="button" class="ftx-form-btn">Ajouter une carte de crédit</button>
                         </div>
 
-                        <button type="cancel" class="ftx-form-btn">Cancel</button>
-                        <button type="submit" class="ftx-form-btn">Souscription</button>
-                    </div>
+                        <div class="ftx-form-buttons">
+                            <button type="cancel" class="ftx-form-cancel">Cancel</button>
+                            <button type="submit" class="ftx-form-submit">Souscription</button>
+                        </div>
+                        <div id="validate-form" class="ftx-error"></div>
+                    </form>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <p>FLETNIX &copy; 2025 - Projet Cegep Limoilou - TR-00Q2-00Q6-DY63 - AEC (RAC)</p>
-    </footer>
-
-    <script src="app.js"></script>
+        <footer>
+            <p>FLETNIX &copy; 2025 - Projet Cegep Limoilou - TR-00Q2-00Q6-DY63 - AEC (RAC)</p>
+        </footer>
+    </div>
+    <script type="module" src="./dist/carouselImages.js"></script>
+    <script type="module" src="./dist/carousel.js"></script>
+    <script type="module" src="./dist/formValidator.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>

@@ -10,3 +10,105 @@ body {
   line-height: 1.5;
   color: #FCDDEC;
 }
+html {
+  font-size: 10px;
+}
+footer {
+  font-size: 1.2rem;
+  clear: both;
+  position: relative;
+  bottom: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+input {
+  padding: 8px;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #333;
+  color: #EF5DA8;
+}
+.carousel-container {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+  z-index: -1;
+}
+.carousel {
+  display: flex;
+  animation: scroll 30s linear infinite;
+}
+.carousel img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.ftx-branding {
+  text-align: center;
+  padding: 8rem 0;
+}
+.ftx-showcase {
+  text-align: center;
+}
+.ftx-container {
+  text-align: center;
+}
+.ftx-boxes {
+  margin: 3rem 0;
+}
+.ftx-box h2 {
+  padding: 1rem 0;
+}
+.ftx-box p {
+  font-size: 1.4rem;
+  padding: 0;
+}
+.ftx-form {
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  max-width: 25%;
+}
+.ftx-form radiogroup {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+.ftx-form-radio {
+  display: flex;
+  text-align: left;
+  padding: 2rem 3rem;
+}
+.ftx-form-radiolabel,
+.ftx-form-radioinput {
+  margin: 0;
+  padding: 0 1rem;
+}
+.ftx-form-input {
+  margin-bottom: 1.5rem;
+}
+.ftx-form-label {
+  margin-bottom: 0.5rem;
+}
+.ftx-form-buttons {
+  margin: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ftx-form-error {
+  color: #f44336;
+}
