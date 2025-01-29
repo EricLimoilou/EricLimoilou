@@ -1,0 +1,30 @@
+[
+    {
+        "Firstname": "Nicole",
+        "Lastname": "Gadbois",
+        "Identification": "ngadbois",
+        "Password": "1Bebe*doux",
+        "IsSuperAdmin": true
+    },
+    {
+        "Firstname": "Emilie",
+        "Lastname": "Beauchamp",
+        "Identification": "ebeauchamp",
+        "Password": "E1m2i3li4e5",
+        "IsSuperAdmin": false
+    },
+    {
+        "Firstname": "Paul",
+        "Lastname": "Astier",
+        "Identification": "pastier",
+        "Password": "L1m01l0u!",
+        "IsSuperAdmin": true
+    },
+    {
+        "Firstname": "Serge",
+        "Lastname": "Molitor",
+        "Identification": "smolitor",
+        "Password": "U1*$324r#R%d3",
+        "IsSuperAdmin": false
+    }
+]

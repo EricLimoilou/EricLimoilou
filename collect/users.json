@@ -1,0 +1,37 @@
+[
+    {
+        "Firstname": "Philippe",
+        "Lastname": "Montelecchi",
+        "Email": "philmont412@gmail.com"
+    },
+    {
+        "Firstname": "Justine",
+        "Lastname": "Cadoret",
+        "Email": "cadotine@hotmail.com"
+    },
+    {
+        "Firstname": "Mike",
+        "Lastname": "Cavendish",
+        "Email": "mikecavendish@hotmail.com"
+    },
+    {
+        "Firstname": "Jean-Francois",
+        "Lastname": "Savard",
+        "Email": "jfsavard@me.com"
+    },
+    {
+        "Firstname": "Claude",
+        "Lastname": "Tremblay",
+        "Email": "cloclo764@gmail.com"
+    },
+    {
+        "Firstname": "Félix",
+        "Lastname": "Leclerc",
+        "Email": "fel.lecl@myWay.com"
+    },
+    {
+        "Firstname": "Nicole",
+        "Lastname": "Germain",
+        "Email": "germicole@moi.com"
+    }
+]

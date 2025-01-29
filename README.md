@@ -6,20 +6,23 @@ Développé sous Visual Studio Code, avec l'extension 'Live Server' (lancer l'ex
 
 - Lancer par un double click sur 'index.html'.
 
-- Il faut s'inscrire pour pouvoir accéder à la plateforme.
-        1 Seules les cartes de crédit Visa, Mastercard, America Express, Diners Club, Discover et JCB Cards sont acceptées.
+- Page LOGIN
+    - Un utilisateur a un IDENTIFIANT et un MOT DE PASSE.
+    - 2 types d'employés: Admin (lecteur seule) et SuperAdmin (Lecture et écriture)
 
-        2 Des numéros de cartes de crédit de tests se trouvent dans 'collect / creditcards.json'.
+- Page Principale
+    - Une fois connecté, l'admin (ou super-admin) a la possibilité de consulter la liste des clients, ou la liste des films proposés.
+    - En haut et à droite se trouve le bouton de déconnection (qui ramène au login).
 
-        3 L'utilisateur peut utiliser jusqu'à 5 cartes de crédit pour payer. Cliquer sur le bouton "Ajouter une carte de crédit pour changer de carte de crédit".
+- Page Client
+    - Les actions MODIFIER, SUPPRIMER, et CRÉER sont disponibles.
+        - 1 client existe avec un nom, prénom, et courriel (unique).
+        - 2 clients ne peuvent avoir le même courriel
+    
+- Page Films
+    - Visualisation des films proposés sur la plateforme.
+    - À droite de chaque film, un bouton permet l'ouverture d'une fenêtre qui affichera le détail du film, soit: le titre, la durée, la catégorie, les acteurs et d'autres renseignements pertinents.
         
-
-- Une fois inscrit, les informations sont stockées dans le local storage du navigateur. Si un nettoyage de la cache est effectué, la page de connection s'ouvrira.
-
-- Une fois la connection effectuée, l'utilisateur doit choisir un avatar pour définir son profil.
-
-- Une fois ces étapes terminées, l'utilisateur accède à la page principale de la plateforme.
-
 -----------------------------------------------------------------------------------------------------------
 
 ###Languages utilisés: HTML, CSS (Less) et Javascript (Typescript)
@@ -27,12 +30,13 @@ Développé sous Visual Studio Code, avec l'extension 'Live Server' (lancer l'ex
 ##Structure:
     - index.html            ->  Page d'accueil
     - dossier 'assets'      ->  Contient les fichiers SVG
-    - dossier 'collect'     ->  Contient les collections
+    - dossier 'collect'     ->  Contient les collections (Users)
     - dossier 'images'      ->  Contient les images des films proposés
-    - dossier 'js'          ->  Contient les fichier Javascript et Typescript originaux
+    - dossier 'js'          ->  Contient les fichier Javascript principaux
+    - dossier 'dist'        ->  Contient les fichiers Typescript convertis en Javascript
+    - dossier 'src'         ->  Contient les fichiers Typescript originaux
     - dossier 'pages'       ->  Contient les différentes pages HTML qui composent la plateforme
     - dossier 'style'       ->  Contient les fichiers CSS
 
-    Pour accéder à la section "ADMIN" de la plateforme, utiliser le fichier 'admin.html'.
 
 Chaque fichier JS / Typescript est commenté.

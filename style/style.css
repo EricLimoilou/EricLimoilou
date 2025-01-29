@@ -30,11 +30,12 @@ input {
 }
 .carousel-container {
   position: fixed;
-  top: 100px;
+  top: 10rem;
   left: 0;
   width: 100%;
   overflow: hidden;
   background-color: #000;
+  opacity: 0.3;
   z-index: -1;
 }
 .carousel {
@@ -75,6 +76,12 @@ input {
   font-size: 1.4rem;
   padding: 0;
 }
+.ftx-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
 .ftx-form {
   margin: 0 auto;
   text-align: left;
@@ -82,8 +89,7 @@ input {
   flex-direction: column;
   max-width: 25%;
 }
-.ftx-form radiogroup {
-  margin-top: 3rem;
+.ftx-form-radiogroup {
   display: flex;
   justify-content: center;
 }
@@ -98,7 +104,9 @@ input {
   padding: 0 1rem;
 }
 .ftx-form-input {
+  width: 100%;
   margin-bottom: 1.5rem;
+  font-size: 1.8rem;
 }
 .ftx-form-label {
   margin-bottom: 0.5rem;
@@ -108,6 +116,47 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.ftx-form-buttons:has(.ftx-form-btn) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.ftx-form-btn {
+  background-color: #FCDDEC;
+  color: #000;
+  padding: 0.3rem 0.9rem;
+  border-radius: 0.8rem;
+}
+.ftx-form-btn:hover,
+.ftx-form-btn:focus {
+  cursor: pointer;
+  background-color: #F178B6;
+}
+.ftx-form-cancel {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 1rem 1.8rem;
+  border-radius: 3rem;
+  border: 3px solid #FCDDEC;
+}
+.ftx-form-cancel:hover,
+.ftx-form-cancel:focus {
+  cursor: pointer;
+  color: #f5f5f5;
+  background-color: #333;
+}
+.ftx-form-submit {
+  background-color: #F178B6;
+  color: #333;
+  padding: 1rem 1.8rem;
+  border-radius: 3rem;
+  border: 3px solid #FCDDEC;
+}
+.ftx-form-submit:hover,
+.ftx-form-submit:focus {
+  cursor: pointer;
+  color: #f5f5f5;
+  background-color: #333;
 }
 .ftx-form-error {
   color: #f44336;

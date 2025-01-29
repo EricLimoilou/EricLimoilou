@@ -40,11 +40,12 @@ input {
 // Carousel d'images
 .carousel-container {
     position: fixed;
-    top: 100px;
+    top: 10rem;
     left: 0;
     width: 100%;
     overflow: hidden;
-    background-color: #000;
+    background-color: @color-black;
+    opacity: 0.3;
     z-index: -1;
 }
 
@@ -83,7 +84,6 @@ input {
 
     &-container {
         text-align: center;
-        // line-height: 2.5;
     }
 
     &-boxes {
@@ -101,6 +101,13 @@ input {
         }
     }
 
+    &-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
     // Formulaire de souscription
     &-form {
         margin: 0 auto;
@@ -109,8 +116,7 @@ input {
         flex-direction: column;
         max-width: 25%;
         
-        radiogroup {
-            margin-top: 3rem;
+        &-radiogroup {
             display: flex;
             justify-content: center;
         }
@@ -128,7 +134,9 @@ input {
         }
 
         &-input {
+            width: 100%;
             margin-bottom: 1.5rem;
+            font-size: 1.8rem;
         }
 
         &-label {
@@ -140,11 +148,58 @@ input {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            &:has(.ftx-form-btn) {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+        }
+
+        &-btn {
+            background-color: @color-secondary;
+            color: @color-black;
+            padding: 0.3rem 0.9rem;
+            border-radius: 0.8rem;
+
+            &:hover,
+            &:focus {
+                cursor: pointer;
+                background-color: @color-tertiary;
+            }
+        }
+
+        &-cancel {
+            background-color: @color-light;
+            color: @color-dark;
+            padding: 1rem 1.8rem;
+            border-radius: 3rem;
+            border: 3px solid @color-secondary;
+
+            &:hover,
+            &:focus {
+                cursor: pointer;
+                color: @color-light;
+                background-color: @color-dark;
+            }
+        }
+
+        &-submit {
+            background-color: @color-tertiary;
+            color: @color-dark;
+            padding: 1rem 1.8rem;
+            border-radius: 3rem;
+            border: 3px solid @color-secondary;
+
+            &:hover,
+            &:focus {
+                cursor: pointer;
+                color: @color-light;
+                background-color: @color-dark;
+            }
         }
 
         &-error {
             color: @color-danger;
-
         }
     }
 
