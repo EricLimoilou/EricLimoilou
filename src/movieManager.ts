@@ -20,7 +20,6 @@ export class MovieManager {
     private movies: Movie[] = [];
 
     constructor() {
-        // this.movies = moviesData as unknown as Movie[]; // Conversion en type 'unknown' puis en 'Movie[]'
         this.loadMovies();
     }
 
@@ -45,33 +44,6 @@ export class MovieManager {
 
     // Affiche les films sous forme de table HTML.
     displayMovies(): void {
-        // const table = document.createElement("table");
-        // table.innerHTML = `
-        //     <tr>
-        //         <th>ID</th>
-        //         <th>Affiche</th>
-        //         <th>Titre</th>
-        //         <th>Date de sortie</th>
-        //         <th>Actions</th>
-        //     </tr>
-        // `;
-
-        // this.movies.forEach(movie => {
-        //     const row = document.createElement("tr");
-        //     row.innerHTML = `
-        //         <td>${movie.id}</td>
-        //         <td><img src="https://image.tmdb.org/t/p/w200${movie.poster_path}" alt="${movie.title}" /></td>
-        //         <td>${movie.title}</td>
-        //         <td>${movie.release_date}</td>
-        //         <td>
-        //             <button onclick="openModal(${movie.id})">Voir</button>
-        //             <button onclick="deleteMovie(${movie.id})">Supprimer</button>
-        //         </td>
-        //     `;
-        //     table.appendChild(row);
-        // });
-
-        // document.body.appendChild(table);
         const tableContainer = document.getElementById("tableContent");
 
         let tableHTML = `

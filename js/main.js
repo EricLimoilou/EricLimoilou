@@ -1,6 +1,5 @@
 import { UserManager } from '../dist/userManager.js';
 import { generateUserTable } from '../dist/generateTable.js';
-// import { generateMovieTable } from '../dist/generateTableMovie.js';
 import { MovieManager } from '../dist/movieManager.js';
 
 
@@ -32,42 +31,6 @@ if (grant != str) {
 function readClients() {
     generateUserTable();
 }
-
-// function readMovies() {
-//     // Crée le bouton dans le menu
-//     let content = document.getElementById('content');
-//     content?.addEventListener('click', function() {
-
-//         // Instanciation et affichage des films
-//         const movieManager = new MovieManager();
-//         movieManager.displayMovies();
-
-//         // Exposer certaines fonctions globalement (pour les boutons de modale)
-//         (window as any).openModal = (id: number) => {
-//             const movie = movieManager.getMoviesById([id])[0];
-//             if (!movie) return;
-            
-//             const modal = document.createElement("div");
-//             modal.style.position = "fixed";
-//             modal.style.top = "50%";
-//             modal.style.left = "50%";
-//             modal.style.transform = "translate(-50%, -50%)";
-//             modal.style.backgroundColor = "white";
-//             modal.style.padding = "20px";
-//             modal.style.border = "1px solid black";
-//             modal.innerHTML = `
-//                 <h2>${movie.title} (${movie.release_date})</h2>
-//                 <p><strong>Résumé :</strong> ${movie.overview}</p>
-//                 <p><strong>Réalisateur :</strong> ${movie.director}"}</p>
-//                 <p><strong>Acteurs principaux :</strong> ${movie.actors}</p>
-//                 <p><strong>Note :</strong> ${movie.vote_average}/10</p>
-//                 <p><strong>Durée :</strong> ${movie.runtime} minutes</p>
-//                 <button onclick="closeModal()">Fermer</button>
-//             `;
-//             document.body.appendChild(modal);
-//         };
-//     });
-// }
 
 function readMovies() {
     window.movieManager.displayMovies();
