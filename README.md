@@ -1,4 +1,4 @@
-#FLETNIX
+**FLETNIX**
 
 Testé sur Chrome, Firefox et Safari.
 Développé sous Visual Studio Code, avec l'extension 'Live Server' (lancer l'extension sur 'index.html').
@@ -25,18 +25,18 @@ Développé sous Visual Studio Code, avec l'extension 'Live Server' (lancer l'ex
         
 -----------------------------------------------------------------------------------------------------------
 
-###Languages utilisés: HTML, CSS (Less) et Javascript (Typescript)
+**Languages utilisés:** HTML, CSS (Less) et Javascript (Typescript)
 
-##Structure:
-    - index.html            ->  Page d'accueil
-    - dossier 'assets'      ->  Contient les fichiers SVG
-    - dossier 'collect'     ->  Contient les collections (Users)
-    - dossier 'images'      ->  Contient les images des films proposés
-    - dossier 'js'          ->  Contient les fichier Javascript principaux
-    - dossier 'dist'        ->  Contient les fichiers Typescript convertis en Javascript
-    - dossier 'src'         ->  Contient les fichiers Typescript originaux
-    - dossier 'pages'       ->  Contient les différentes pages HTML qui composent la plateforme
-    - dossier 'style'       ->  Contient les fichiers CSS
+**Structure:**
+- index.html            ->  Page d'accueil
+- dossier 'assets'      ->  Contient les fichiers SVG
+- dossier 'collect'     ->  Contient les collections (Users)
+- dossier 'images'      ->  Contient les images des films proposés
+- dossier 'js'          ->  Contient les fichier Javascript principaux
+- dossier 'dist'        ->  Contient les fichiers Typescript convertis en Javascript    
+- dossier 'src'         ->  Contient les fichiers Typescript originaux
+- dossier 'pages'       ->  Contient les différentes pages HTML qui composent la plateforme
+- dossier 'style'       ->  Contient les fichiers CSS
 
 
 Chaque fichier JS / Typescript est commenté.

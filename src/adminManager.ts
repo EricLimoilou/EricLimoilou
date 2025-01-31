@@ -1,16 +1,16 @@
 // Classe de validation du Login
-export class FormValidator {
-  private static usernameRegex = /^[a-zA-Z]+$/;     // Force uniquement les lettres
-  private static passwordMinLength = 8;             // Longueur du mot de passe: 8 caractères minimum
+class FormValidator {
+  private static usernameRegex = /^[a-zA-Z]+$/;           // Force uniquement les lettres
+  private static passwordMinLength = 8;                   // Longueur du mot de passe: 8 caractères minimum
 
   // Validation de l'identifiant
   static validateUsername(username: string): boolean {
-    return this.usernameRegex.test(username);
+    return this.usernameRegex.test(username);             // Teste le nom d'utilisateur avec la regex
   }
 
   // Validation du mot de passe
   static validatePassword(password: string): boolean {
-    return password.length >= this.passwordMinLength;
+    return password.length >= this.passwordMinLength;     // Teste la longueur du mot de passe
   }
 
   // Comparaison de l'identifiant et du mot de passe avec une entrée du fichier JSON
@@ -19,9 +19,9 @@ export class FormValidator {
         // Récupère le contenu du JSON
         const response = await fetch("../collect/admins.json");
         const users = await response.json();
-        return users.some((user: { username: string, password: string }) =>
-            user.username === username && user.password === password
-        );
+        return users.find((user: { username: string, password: string }) => {
+          user.username === username && user.password === password;
+        });
     } catch (error) {
         // Si erreur de lecture du JSON
         console.error("Erreur de chargement du fichier JSON des Admins.", error);
@@ -55,6 +55,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Si l'opération échoue, affiche un message d'erreur, sinon continue
       const isValid = await FormValidator.checkUserCredentials(username, password);
-      message.textContent = isValid ? "Connexion réussie !" : "Identifiants incorrects.";
+      if (isValid) {
+        const str = 'accessGranted';
+        localStorage.setItem('FletnixAdminHasAccessGranted', str);           // Enregistre une valeur quand l'accès est validé
+        window.location.href = "../pages/admin.html";                        // Redirection vers admin.html
+      } else {
+        message.textContent = "Identifiants incorrects.";
+      }
+  });
+
+  form.addEventListener("reset", async (event) => {
+      event.preventDefault();
+
+      // Efface les messages 
+      form.reset();
+      message.textContent = "";
   });
 });

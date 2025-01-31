@@ -7,11 +7,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="../style/font.css">
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
+    <nav id="logo" class="ftx-header">
+        <div class="ftx-header-img">
+            <img src="../assets/Fletnix-logo.svg" alt="Fletnix logo"/>
+        </div>
+
+        <div class="ftx-header-menu">
+            <button type="button" id="clients" class="ftx-header-btn">Clients</div>
+            <button type="button" id="content" class="ftx-header-btn">Contenu</div>
+        </div>
+
+        <button type="button" id="logout" class="ftx-header-img">
+            <img src="../assets/logout.svg" alt="logout" title="Déconnexion"/>
+        </button>
+    </nav>
+
+    <section class="ftx-boxes">
+        <div class="ftx-container">
+            <div id="tableContent" class="ftx-table"></div>
+        </div>
+    </section>
+
+    <!-- Fenêtre modale pour afficher les détails du film dynamiquement -->
+    <div id="movie-modal" class="ftx-modal">
+        <div id="modal-content" class="ftx-modal-content">
+        </div>
+    </div>
+
+    <footer>
+        <p>FLETNIX &copy; 2025 - Projet Cegep Limoilou - TR-00Q2-00Q6-DY63 - AEC (RAC)</p>
+    </footer>
     
-    <script src="../js/admin.js"></script>
+    <script type="module" src="../dist/userManager.js"></script>
+    <script type="module" src="../dist/generateTable.js"></script>
+    <!-- <script type="module" src="../dist/adminManager.js"></script> -->
+    <script type="module" src="../dist/movieManager.js"></script>
+    <script src="../js/main.js" type="module"></script>
 </body>
 </html>
