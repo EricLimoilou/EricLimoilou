@@ -27,8 +27,8 @@
         <section id="boxes" class="ftx-boxes">
             <div class="ftx-container">
 
-                <div class="ftx-box">
-                    <form id="login-form" class="ftx-form">
+                <div id="loginPage" class="ftx-box">
+                    <form id="loginForm" class="ftx-form">
                         <label for="username" class="ftx-form-label">Identifiant</label>
                         <input type="text" id="username" class="ftx-form-input" name="username" required>
 
@@ -36,19 +36,73 @@
                         <input type="password" id="password" class="ftx-form-input" name="password" required>
                         
                         <div class="ftx-form-buttons">
-                            <button type="reset" id="cancel-btn" class="ftx-form-cancel">Annuler</button>
+                            <!-- <button type="reset" id="cancel-btn" class="ftx-form-cancel">Annuler</button> -->
                             <button type="submit" id="submit-btn" class="ftx-form-submit">Accéder</button>
                         </div>
-                        <div id="validate-form" class="ftx-error"></div>
+                        <div id="error" class="ftx-error"></div>
                     </form>
                 </div>
             </div>
         </section>
-
-        <footer>
-            <p>FLETNIX &copy; 2025 - Projet Cegep Limoilou - TR-00Q2-00Q6-DY63 - AEC (RAC)</p>
-        </footer>
     </div>
-    <script type="module" src="./dist/validatorAdmin.js"></script>
+
+
+    <section>
+        <!-- Main Application -->
+        <nav id="appPage" class="ftx-header">
+            <div class="ftx-header-img">
+                <img src="../assets/Fletnix-logo.svg" alt="Fletnix logo"/>
+            </div>
+            
+            <div class="ftx-header-menu">
+                <button type="button" id="clientButton" class="ftx-header-btn">Clients</div>
+            </div>
+
+            <button type="button" id="logoutButton" class="ftx-header-img">
+                <img src="../assets/logout.svg" alt="logout" title="Se déconnecter"/>
+            </button>
+        </nav>
+
+        <h2>Gestion des données</h2>
+
+        <h3>Clients</h3>
+        <table id="clientsTable">
+            <!-- La table des clients sera populée ici dynamiquement -->
+        </table>
+
+        <h3>Films</h3>
+        <table id="filmsTable">
+            <!-- La table des films sera populée ici dynamiquement -->
+        </table>
+    </section>
+        
+
+
+    <!-- Modal for Client Management -->
+    <section id="clientModal" class="ftx-modal">
+        <form id="clientForm" class="ftx-form">
+            <label for="clientName" class="ftx-form-label">Nom: </label>
+            <input type="text" id="clientName" class="ftx-form-input" name="clientName" required>
+
+            <label for="clientLastName" class="ftx-form-label">Prénom: </label>
+            <input type="text" id="clientLastName" class="ftx-form-input" name="clientLastName" required>
+
+            <label for="clientEmail" class="ftx-form-label">Email: </label>
+            <input type="email" id="clientEmail" class="ftx-form-input" name="clientEmail" required>
+
+            <button type="submit" class="ftx-form-submit">Enregistrer</button>
+        </form>
+        <div id="clientError" class="ftx-error"></div>
+        <button id="closeClientModal" class="ftx-form-cancel">Fermer</button>
+    </section>
+
+
+    <footer>
+        <p>FLETNIX &copy; 2025 - Projet Cegep Limoilou - TR-00Q2-00Q6-DY63 - AEC (RAC)</p>
+    </footer>
+
+
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./dist/app.js"></script>
 </body>
 </html>

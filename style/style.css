@@ -219,3 +219,9 @@ input {
 .ftx-modal-content button {
   padding: 1rem 1.5rem;
 }
+.ftx-active {
+  display: block;
+}
+.ftx-inactive {
+  display: none;
+}

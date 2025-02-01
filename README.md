@@ -35,8 +35,4 @@ Développé sous Visual Studio Code, avec l'extension 'Live Server' (lancer l'ex
 - dossier 'js'          ->  Contient les fichier Javascript principaux
 - dossier 'dist'        ->  Contient les fichiers Typescript convertis en Javascript    
 - dossier 'src'         ->  Contient les fichiers Typescript originaux
-- dossier 'pages'       ->  Contient les différentes pages HTML qui composent la plateforme
-- dossier 'style'       ->  Contient les fichiers CSS
-
-
-Chaque fichier JS / Typescript est commenté.
+- dossier 'pages'       ->  Contient les différentes pages HTML qui composent la plat
